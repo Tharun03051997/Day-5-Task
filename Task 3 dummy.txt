@@ -1,0 +1,110 @@
+Day 3 Assignement:
+
+1.For the given JSON iterate overall for (for,forin, for of, for Each)
+
+for loop:
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET','https://restcountries.com/v3.1/all');
+xhr.responseType = 'json';
+xhr.send();
+
+
+xhr.onload = function () {
+    
+ for(let i=0; i<xhr.response.length; i++)
+{
+console.log(xhr.response[i])
+}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+for in
+var xhr = new XMLHttpRequest();
+xhr.open('GET','https://restcountries.com/v3.1/all');
+xhr.responseType = 'json';
+xhr.send();
+
+
+xhr.onload = function () {
+    
+ for(x in xhr.response)
+{
+console.log(xhr.response[x])
+}
+
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+forEach
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET','https://restcountries.com/v3.1/all');
+xhr.responseType = 'json';
+xhr.send();
+
+
+xhr.onload = function () {
+    
+ xhr.response.forEach(i=> console.log(i))
+
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+forof
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET','https://restcountries.com/v3.1/all');
+xhr.responseType = 'json';
+xhr.send();
+
+
+xhr.onload = function () {
+    
+ for(let x of xhr.response)
+{
+console.log(x)
+}
+
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Create Your own resume data in Json Format
+
+{
+"resume":[{"name":"Tharun Kumar"},
+         {"Qualification":"B.E"},
+         {"Year of pass out":"2019"},
+          {"skills":"Adaptability"},
+          {"SSLC":90%},
+          {"HSC": 90%},
+          {"UG": 70%}]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Read about the difference between window,screen and document in javascript
+
+Window object : It is the top most object and outermost element of the object hierarchy as shown in Figure 1.
+
+Document object : Each HTML document that gets loaded into a window becomes a document object. The document contains the contents of the page. Using document object, JavaScript can modify, add and delete the HTML elements, attributes CSS styles in the page
+
+The window object represents a window/tab containing a DOM document where as document object is property of window object that points to the DOM document loaded in that window.
+
+
+Screen
+Screen is the window property that holds information of browser screen. It refers to screen object associated with that window object. Used to display screen width, height, colorDepth, pixelDepth etc
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
